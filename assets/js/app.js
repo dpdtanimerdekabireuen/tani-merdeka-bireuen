@@ -1,4 +1,4 @@
-const data=window.TMI_DATA;const $=s=>document.querySelector(s);
+const data=window.TMI_DATA;const $=s=>document.querySelector(s);const pmAasNews=data.news.find(x=>x.title.startsWith('Dorong Produksi Padi'));if(pmAasNews)pmAasNews.date='13 Oktober 2026';
 function render(){
   $('#leaders').innerHTML=data.leaders.map(x=>`<article class="card"><div class="leader-avatar"><img src="assets/images/${x.image}" alt="Foto ${x.role} ${x.name}" loading="lazy"></div><div class="leader-role">${x.role}</div><h3>${x.name}</h3></article>`).join('');
   $('#districts').innerHTML=data.districts.map(x=>`<div class="district"><strong>${x}</strong><span>Ketua KORCAM: menunggu data resmi</span></div>`).join('');
