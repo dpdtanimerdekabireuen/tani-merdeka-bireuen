@@ -1,6 +1,6 @@
 backend:
-  name: github
-  repo: dpdtanimerdekabireuen/tani-merdeka-bireuen
+  name: turbo-github
+  turbo_site_id: 4b3a1ba3-82e9-4e45-b33f-00b0a31ac933
   branch: main
 
 media_folder: "assets/images"
