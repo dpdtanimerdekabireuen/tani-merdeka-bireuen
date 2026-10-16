@@ -2,3 +2,4 @@
 .hero-photo{padding:0;min-height:390px;position:relative;background:#dfeee0;overflow:hidden}.hero-photo>img{display:block;width:100%;height:100%;min-height:390px;object-fit:cover;object-position:center}.hero-photo-caption{position:absolute;left:18px;right:18px;bottom:18px;padding:14px 16px;border-radius:12px;background:#104d2bd9;color:#fff;display:grid;gap:2px}.hero-photo-caption span{font-size:.8rem;color:#dcebdd}.hero-photo-caption b{font-size:1.1rem}@media(max-width:720px){.gallery-grid{grid-template-columns:1fr}.hero-photo,.hero-photo>img{min-height:280px}}
 .article-image{display:block;width:100%;height:210px;object-fit:cover;background:#dfeee0}
 .leader-avatar{height:auto;aspect-ratio:4/5;overflow:hidden;background:#e3f0e5}.leader-avatar img{display:block;width:100%;height:100%;object-fit:contain;object-position:center center}
+.district img{display:block;width:58px;height:58px;margin-top:10px;border-radius:50%;object-fit:cover;object-position:center top}

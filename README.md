@@ -11,6 +11,8 @@ Website statis DPD Tani Merdeka Indonesia Kabupaten Bireuen.
 - `assets/js/app.js`: pencarian, filter, modal artikel, menu mobile, dan validasi formulir.
 - `privacy.html`, `404.html`, `robots.txt`, `sitemap.xml`: kebutuhan dasar publikasi.
 - `docs/google-form-aspirasi.md`: template pertanyaan Google Form aspirasi.
+- `admin/`: panel CMS Decap untuk pengelolaan data.
+- `content/korcam.json`: data KORCAM yang dibaca otomatis oleh website.
 
 ## Menjalankan lokal
 

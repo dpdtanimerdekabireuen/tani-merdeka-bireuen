@@ -1,0 +1,130 @@
+backend:
+  name: github
+  repo: dpdtanimerdekabireuen/tani-merdeka-bireuen
+  branch: main
+
+media_folder: "assets/images"
+public_folder: "/tani-merdeka-bireuen/assets/images"
+locale: "id"
+
+collections:
+  - name: "korcam"
+    label: "Data KORCAM"
+    files:
+      - label: "Daftar Ketua KORCAM"
+        name: "korcam-list"
+        file: "content/korcam.json"
+        format: "json"
+        fields:
+          - label: "Daftar kecamatan"
+            name: "items"
+            widget: "list"
+            fields:
+              - label: "Nama kecamatan"
+                name: "district"
+                widget: "string"
+              - label: "Nama Ketua KORCAM"
+                name: "leader"
+                widget: "string"
+              - label: "Foto Ketua KORCAM"
+                name: "photo"
+                widget: "image"
+                required: false
+              - label: "Status tampil"
+                name: "active"
+                widget: "boolean"
+                default: true
+  - name: "settings"
+    label: "Visi dan Misi"
+    files:
+      - label: "Visi dan Misi Organisasi"
+        name: "site-settings"
+        file: "content/site.json"
+        format: "json"
+        fields:
+          - label: "Visi"
+            name: "vision"
+            widget: "text"
+          - label: "Misi"
+            name: "mission"
+            widget: "text"
+  - name: "leaders"
+    label: "Pengurus DPD"
+    files:
+      - label: "Pengurus DPD"
+        name: "leaders-list"
+        file: "content/leaders.json"
+        format: "json"
+        fields:
+          - label: "Daftar pengurus"
+            name: "items"
+            widget: "list"
+            fields:
+              - {label: "Jabatan", name: "role", widget: "string"}
+              - {label: "Nama", name: "name", widget: "string"}
+              - {label: "Foto", name: "image", widget: "image", required: false}
+  - name: "news"
+    label: "Berita dan Kegiatan"
+    files:
+      - label: "Daftar berita"
+        name: "news-list"
+        file: "content/news.json"
+        format: "json"
+        fields:
+          - label: "Artikel"
+            name: "items"
+            widget: "list"
+            fields:
+              - {label: "Kategori", name: "category", widget: "select", options: ["Berita Organisasi", "Kegiatan DPD", "Kegiatan Pertanian", "Program Pertanian", "Kebijakan Pertanian", "Berita Pertanian Bireuen", "Informasi Nasional"]}
+              - {label: "Judul", name: "title", widget: "string"}
+              - {label: "Ringkasan", name: "summary", widget: "text"}
+              - {label: "Tanggal", name: "date", widget: "string"}
+              - {label: "Foto utama", name: "image", widget: "image", required: false}
+              - {label: "Isi berita", name: "body", widget: "text"}
+  - name: "education"
+    label: "Kegiatan Pertanian"
+    files:
+      - label: "Kegiatan Pertanian"
+        name: "education-list"
+        file: "content/education.json"
+        format: "json"
+        fields:
+          - label: "Daftar kegiatan"
+            name: "items"
+            widget: "list"
+            fields:
+              - {label: "Judul", name: "title", widget: "string"}
+              - {label: "Ringkasan", name: "summary", widget: "text"}
+  - name: "information"
+    label: "Informasi Pertanian"
+    files:
+      - label: "Informasi Pertanian"
+        name: "information-list"
+        file: "content/information.json"
+        format: "json"
+        fields:
+          - label: "Daftar informasi"
+            name: "items"
+            widget: "list"
+            fields:
+              - {label: "Judul", name: "title", widget: "string"}
+              - {label: "Ringkasan", name: "summary", widget: "text"}
+  - name: "gallery"
+    label: "Galeri Kegiatan"
+    files:
+      - label: "Galeri Kegiatan"
+        name: "gallery-list"
+        file: "content/gallery.json"
+        format: "json"
+        fields:
+          - label: "Foto galeri"
+            name: "items"
+            widget: "list"
+            fields:
+              - {label: "Foto", name: "file", widget: "image"}
+              - {label: "Judul", name: "title", widget: "string"}
+              - {label: "Kategori", name: "category", widget: "string"}
+              - {label: "Tanggal", name: "date", widget: "string"}
+              - {label: "Caption", name: "caption", widget: "text"}
+              - {label: "Kredit foto", name: "credit", widget: "string", required: false}
+              - {label: "Teks alternatif", name: "alt", widget: "string"}
